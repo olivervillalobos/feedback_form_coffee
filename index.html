@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Survey Form</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap"
+            rel="stylesheet">
+        <link rel="shortcut icon" href="caritasweb-1.ico" type="image/x-icon">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <div class="outside-box">
+            <header>
+                <h1 id="title">FEEDBACK</h1>
+                <p id="description">Please fill out the form below to
+                    improve our
+                    services, thank you!</p>
+            </header>
+            <main>
+                <form id="survey-form" method="POST" action>
+                    <section id="section-basic-info">
+                        <label for="name" id="name-label">Enter your Full
+                            Name:</label>
+                        <input
+                            id="name" type="text" placeholder="John Doe"
+                            required>
+                        <br>
+                        <label for="email" id="email-label">Enter your Email
+                            Address:</label>
+                        <input id="email" type="email"
+                            placeholder="johndoe@email.com" required>
+                        <br>
+                        <label for="number" id="number-email">Enter your
+                            Age:</label>
+                        <input
+                            id="number" type="number" min=5 max=120
+                            placeholder=24
+                            required>
+                        <br>
+                        <label for="dropdown">
+                            Select the reason for your visit:
+                        </label>
+                        <select id="dropdown" required>
+                            <option value disabled selected hidden>Select
+                                your
+                                option</option>
+                            <option value=1>Study or Homework</option>
+                            <option value=2>Work</option>
+                            <option value=3>Date or meeting</option>
+                            <option value=4>Coffee Run</option>
+                            <option value=5>Reading or Selfcare session</option>
+                            <option value=6>Get to know ar shop</option>
+                            <option value=7>Other</option>
+                        </select>
+                    </section>
+                    <br>
+                    <fieldset id="recommendation">
+                        <legend>Would you recommend us?</legend>
+                        <div>
+                            <input type="radio" name="recommendation"
+                                id="definitely" value="definitely" checked><label
+                                for="definitely">Definitely!</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="recommendation"
+                                id="maybe"
+                                value="maybe"><label for="maybe">Maybe</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="recommendation"
+                                id="no"
+                                value="no"><label for="no">Not really</label>
+                        </div>
+                    </fieldset>
+                    <br>
+                    <section id="section-checkbox">
+                        <label>Where did you hear from us?(Select all that
+                            apply!)</label>
+                        <br>
+                        <input type="checkbox" id="facebook" name="facebook"
+                            checked><label
+                            for="facebook">Facebook</label><br>
+                        <input type="checkbox" id="instagram"
+                            name="instagram"><label
+                            for="instagram">Instagram</label><br>
+                        <input type="checkbox" id="tiktok" name="tiktok"><label
+                            for="tiktok">TikTok</label><br>
+                        <input type="checkbox" id="x" name="x"><label
+                            for="x">X(Twitter)</label><br>
+                        <input type="checkbox" id="maps" name="maps"><label
+                            for="maps">Maps</label><br>
+                        <input type="checkbox" id="youtube" name="youtube"><label
+                            for="youtube">YouTube</label><br>
+                        <input type="checkbox" id="other" name="other"><label
+                            for="other">Other</label>
+                    </section>
+                    <section id="section-textarea">
+                        <label for="suggestions">Any suggestions?</label>
+                        <textarea id="suggestions" cols=45 rows=5
+                            placeholder="Write here..."></textarea>
+                    </section>
+                    <input type="submit" value="SUBMIT" onclick="myFunction()">
+                </form>
+            </main>
+        </div>
+    </body>
+</html>
